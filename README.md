@@ -1,50 +1,62 @@
 # AI Hive — Local-First AI Infrastructure Suite
 
-AI Hive is a local-first AI infrastructure suite made of seven independently deployable systems for model serving, observability, benchmarking, feature management, orchestration, deployment, and scheduling. The suite is designed to run on local hardware with zero cloud dependency while demonstrating production-style AI infrastructure patterns.
+AI Hive is a local-first AI infrastructure suite made of seven independently deployable systems for model serving, observability, benchmarking, feature management, orchestration, deployment, and scheduling.
+
+The goal of AI Hive is to go beyond building AI applications and instead build the infrastructure layer around production AI systems. Each project is designed to run locally with zero required cloud dependency while demonstrating production-style AI infrastructure patterns.
 
 ---
 
 ## Projects
 
-| Project | Role in AI Hive | Description |
-|---------|----------------|-------------|
-| **[Hermes](https://github.com/YOUR_USERNAME/hermes)** | Serve | Distributed LLM inference gateway with routing, circuit breakers, rate limiting, streaming, and observability |
-| **[Argus](https://github.com/YOUR_USERNAME/argus)** | Monitor | ML observability and drift detection platform with statistical tests, alerts, and dashboards |
-| **[Pyrex](https://github.com/YOUR_USERNAME/pyrex)** | Benchmark | Cross-backend inference benchmarking suite for Apple Silicon (PyTorch MPS, ONNX Runtime, MLX, CPU) |
-| **[Strata](https://github.com/YOUR_USERNAME/strata)** | Store Features | Online/offline feature store with Redis serving, DuckDB/Parquet storage, and point-in-time joins |
-| **[Conduit](https://github.com/YOUR_USERNAME/conduit)** | Orchestrate | Event-driven ML pipeline orchestrator with Python DAG DSL, Redis Streams, retries, and DLQ |
-| **[Capsule](https://github.com/YOUR_USERNAME/capsule)** | Deploy | Container-native model deployment platform with Dockerfile generation, MinIO registry, Helm/K3s, and canary workflows |
-| **[Lattice](https://github.com/YOUR_USERNAME/lattice)** | Schedule | Distributed ML job scheduler simulation with fair-share scheduling, gang scheduling, preemption, and backfill |
-
-> **Note**: Replace `YOUR_USERNAME` with your actual GitHub username or organization name after creating repositories.
+| Project                                                               | Role in AI Hive | Description                                                                                                           |
+| --------------------------------------------------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------- |
+| **[Hermes](https://github.com/Gopal-Singh-Subramani-Singh/hermes)**   | Serve           | Distributed LLM inference gateway with routing, circuit breakers, rate limiting, streaming, and observability         |
+| **[Argus](https://github.com/Gopal-Singh-Subramani-Singh/argus)**     | Monitor         | ML observability and drift detection platform with statistical tests, alerts, and dashboards                          |
+| **[Pyrex](https://github.com/Gopal-Singh-Subramani-Singh/pyrex)**     | Benchmark       | Cross-backend inference benchmarking suite for Apple Silicon, PyTorch MPS, ONNX Runtime, MLX, and CPU                 |
+| **[Strata](https://github.com/Gopal-Singh-Subramani-Singh/strata)**   | Store Features  | Online/offline feature store with Redis serving, DuckDB/Parquet storage, and point-in-time joins                      |
+| **[Conduit](https://github.com/Gopal-Singh-Subramani-Singh/conduit)** | Orchestrate     | Event-driven ML pipeline orchestrator with Python DAG DSL, Redis Streams, retries, and dead letter queues             |
+| **[Capsule](https://github.com/Gopal-Singh-Subramani-Singh/capsule)** | Deploy          | Container-native model deployment platform with Dockerfile generation, MinIO registry, Helm/K3s, and canary workflows |
+| **[Lattice](https://github.com/Gopal-Singh-Subramani-Singh/lattice)** | Schedule        | Distributed ML job scheduler simulation with fair-share scheduling, gang scheduling, preemption, and backfill         |
 
 ---
 
 ## Lifecycle
 
-```
+```text
 serve → monitor → benchmark → store features → orchestrate pipelines → deploy models → schedule jobs
+```
+
+AI Hive maps the production AI infrastructure lifecycle into seven focused systems:
+
+```text
+Hermes  → serve models
+Argus   → monitor model behavior
+Pyrex   → benchmark inference performance
+Strata  → manage online/offline features
+Conduit → orchestrate ML workflows
+Capsule → package and deploy models
+Lattice → schedule ML jobs
 ```
 
 ---
 
 ## Architecture
 
-```
-AI Hive
-Local-First AI Infrastructure Suite
+```text
+                         AI Hive
+        Local-First AI Infrastructure Suite
 
-┌─────────────────────────────────────────────────────────┐
-│                                                         │
-│  Hermes   →  LLM inference serving and routing          │
-│  Argus    →  ML observability and drift detection       │
-│  Pyrex    →  Inference benchmarking and profiling       │
-│  Strata   →  Online/offline feature serving             │
-│  Conduit  →  Event-driven ML pipeline orchestration     │
-│  Capsule  →  Model packaging and deployment             │
-│  Lattice  →  Distributed job scheduling                 │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
+ ┌─────────────────────────────────────────────────────┐
+ │                                                     │
+ │  Hermes   →  LLM inference serving and routing      │
+ │  Argus    →  ML observability and drift detection   │
+ │  Pyrex    →  Inference benchmarking and profiling   │
+ │  Strata   →  Online/offline feature serving         │
+ │  Conduit  →  Event-driven ML pipeline orchestration │
+ │  Capsule  →  Model packaging and deployment         │
+ │  Lattice  →  Distributed job scheduling             │
+ │                                                     │
+ └─────────────────────────────────────────────────────┘
 ```
 
 See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed architecture documentation.
@@ -53,162 +65,122 @@ See [ARCHITECTURE.md](./ARCHITECTURE.md) for detailed architecture documentation
 
 ## Tech Stack
 
-**Languages**: Python  
-**Frameworks**: FastAPI, Flask  
-**Databases**: Redis, TimescaleDB, DuckDB, SQLite  
-**Storage**: MinIO, Parquet  
-**Orchestration**: Kubernetes/K3s, Helm, Docker  
-**Observability**: Prometheus, Grafana  
-**ML/AI**: PyTorch, ONNX Runtime, Apple MLX, Ollama, SHAP  
-**Protocols**: gRPC, HTTP/REST, SSE (Server-Sent Events)
+**Languages:** Python
+**Frameworks:** FastAPI, Flask
+**Databases:** Redis, TimescaleDB, DuckDB, SQLite
+**Storage:** MinIO, Parquet
+**Orchestration:** Docker, Docker Compose, Kubernetes/K3s, Helm
+**Observability:** Prometheus, Grafana
+**ML/AI:** PyTorch, ONNX Runtime, Apple MLX, Ollama, SHAP
+**Protocols:** HTTP/REST, gRPC, SSE
 
 ---
 
 ## Design Principles
 
-1. **Local-first** — Designed for Apple Silicon, zero cloud dependency
-2. **Independent deployability** — Each project runs standalone with `docker compose up`
-3. **No cross-project runtime dependencies** — Hermes does not require Argus; Strata does not require Conduit
-4. **Production-style patterns** — Circuit breakers, rate limiting, dead letter queues, ASOF joins, canary deployments, drift detection
-5. **Observable by default** — All systems export Prometheus metrics and include Grafana dashboards
-6. **Testable** — Each project has 30+ pytest tests, all mocked for fast execution
+1. **Local-first** — Designed for Apple Silicon and local development with zero required cloud dependency.
+2. **Independent deployability** — Each project is designed to run as a standalone system.
+3. **No hard runtime coupling** — Hermes does not require Argus; Strata does not require Conduit.
+4. **Production-style patterns** — Circuit breakers, rate limiting, dead letter queues, ASOF joins, canary deployments, drift detection, and fair-share scheduling.
+5. **Observable by default** — Systems expose metrics and include observability documentation where applicable.
+6. **Testable** — Projects include pytest-based test suites and local validation workflows.
 
 ---
 
 ## Optional Integrations
 
-While each system is independently runnable, they can be composed:
+Each system is independently runnable, but the projects can be composed into larger workflows:
 
-- **Argus** can monitor **Hermes** metrics (LLM gateway drift detection)
-- **Pyrex** can benchmark **Hermes** backends (inference performance analysis)
-- **Capsule** can package and deploy model services monitored by **Argus**
-- **Conduit** can orchestrate workflows that use **Strata** features
-- **Lattice** can schedule jobs triggered by **Conduit** pipelines
+* **Argus** can monitor metrics and model behavior from **Hermes**.
+* **Pyrex** can benchmark model backends used by **Hermes**.
+* **Capsule** can package and deploy model services monitored by **Argus**.
+* **Conduit** can orchestrate workflows that use **Strata** features.
+* **Lattice** can schedule jobs triggered by **Conduit** pipelines.
 
-These are **optional integrations**. Each system is independently runnable.
+These are optional integrations, not hard dependencies.
 
 ---
 
 ## Quick Start
 
-Each project can be started independently. See individual project READMEs for full instructions.
+Each system is published as an independent repository. Clone a project and follow its README.
 
-### Hermes (LLM Gateway)
+Example:
+
 ```bash
+git clone https://github.com/Gopal-Singh-Subramani-Singh/hermes.git
 cd hermes
 pip install -r requirements.txt
-docker run -d -p 6379:6379 redis:7-alpine
-uvicorn gateway.main:app --port 8000
+python -m pytest tests -v
 ```
 
-### Argus (Drift Detection)
-```bash
-cd argus
-pip install -r requirements.txt
-docker compose up timescaledb redis prometheus grafana -d
-uvicorn argus_core.main:app --port 8001
-```
+For project-specific setup, see the individual repositories:
 
-### Pyrex (Benchmarking)
-```bash
-cd pyrex
-pip install -e .
-pyrex run --quick
-```
-
-### Strata (Feature Store)
-```bash
-cd strata
-pip install -r requirements.txt
-docker compose up redis minio prometheus grafana -d
-uvicorn strata_core.main:app --port 8003
-```
-
-### Conduit (Pipeline Orchestrator)
-```bash
-cd conduit
-pip install -r requirements.txt
-docker compose up redis prometheus grafana -d
-uvicorn conduit_api.main:app --port 8004
-```
-
-### Capsule (Model Deployment)
-```bash
-cd capsule
-pip install -e .
-docker compose up minio registry -d
-capsule package --manifest examples/fraud_detector/capsule.yaml
-```
-
-### Lattice (Job Scheduler)
-```bash
-cd lattice
-pip install -r requirements.txt
-docker compose up redis prometheus grafana -d
-uvicorn lattice.api.rest_api:app --port 8002
-```
+* [Hermes](https://github.com/Gopal-Singh-Subramani-Singh/hermes)
+* [Argus](https://github.com/Gopal-Singh-Subramani-Singh/argus)
+* [Pyrex](https://github.com/Gopal-Singh-Subramani-Singh/pyrex)
+* [Strata](https://github.com/Gopal-Singh-Subramani-Singh/strata)
+* [Conduit](https://github.com/Gopal-Singh-Subramani-Singh/conduit)
+* [Capsule](https://github.com/Gopal-Singh-Subramani-Singh/capsule)
+* [Lattice](https://github.com/Gopal-Singh-Subramani-Singh/lattice)
 
 ---
 
 ## Integration Demo
 
-See [INTEGRATION_DEMO.md](./INTEGRATION_DEMO.md) for a full end-to-end demo connecting multiple systems.
+See [INTEGRATION_DEMO.md](./INTEGRATION_DEMO.md) for examples of independent demos, paired demos, and full ecosystem narratives.
 
 ---
 
 ## Resume Snippets
 
-See [RESUME_SNIPPETS.md](./RESUME_SNIPPETS.md) for ready-to-use resume bullets.
+See [RESUME_SNIPPETS.md](./RESUME_SNIPPETS.md) for resume-ready descriptions of AI Hive and selected systems.
 
 ---
 
 ## LinkedIn Post
 
-See [LINKEDIN_POST.md](./LINKEDIN_POST.md) for a professional LinkedIn launch post.
+See [LINKEDIN_POST.md](./LINKEDIN_POST.md) for a professional launch post draft.
 
 ---
 
-## Project Structure
+## Repository Structure
 
+AI Hive is published as separate repositories:
+
+```text
+ai-hive    # Umbrella landing repository
+hermes     # LLM inference gateway
+argus      # ML observability platform
+pyrex      # Inference benchmark suite
+strata     # Feature store
+conduit    # Pipeline orchestrator
+capsule    # Model deployment platform
+lattice    # Job scheduler
 ```
-ai-hive/                    # Umbrella landing repository
-├── hermes/                 # LLM inference gateway
-├── argus/                  # ML observability platform
-├── pyrex/                  # Inference benchmark suite
-├── strata/                 # Feature store
-├── conduit/                # Pipeline orchestrator
-├── capsule/                # Model deployment platform
-└── lattice/                # Job scheduler
-```
+
+The `ai-hive` repository is the landing page and portfolio hub. Source code lives in the individual project repositories.
 
 ---
 
 ## License
 
-Each project contains its own license. Please refer to individual project repositories.
-
----
-
-## Contributing
-
-Contributions are welcome! Each project is independently maintained. Please refer to individual project repositories for contribution guidelines.
+Each project contains its own license. Refer to the individual project repositories for license details.
 
 ---
 
 ## Contact
 
-Built by [Your Name]  
-GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)  
-LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/YOUR_PROFILE)
+Built by **Gopal Singh Subramani Singh**
 
-> **Note**: Replace with your actual contact information after creating repositories.
+GitHub: [@Gopal-Singh-Subramani-Singh](https://github.com/Gopal-Singh-Subramani-Singh)
 
 ---
 
 ## Acknowledgments
 
-AI Hive was built as a learning project to go deep into production AI infrastructure patterns. Each system implements patterns from real-world distributed systems and MLOps platforms.
+AI Hive was built as a learning-focused infrastructure suite to explore production AI systems patterns across model serving, observability, deployment, scheduling, benchmarking, orchestration, and feature management.
 
 ---
 
-**Last Updated**: 2026-07-04
+**Last Updated:** 2026-07-04

@@ -26,7 +26,7 @@ Python · FastAPI · Redis · Ollama · Prometheus · Grafana · Docker · Locus
 - Observability and metrics
 
 ### Repository
-[github.com/YOUR_USERNAME/hermes](https://github.com/YOUR_USERNAME/hermes)
+[github.com/YOUR_USERNAME/hermes](https://github.com/Gopal-Singh-Subramani-Singh/hermes)
 
 ---
 
@@ -52,7 +52,7 @@ Python · FastAPI · Redis Streams · TimescaleDB · DuckDB · APScheduler · Pr
 - ML model monitoring in production
 
 ### Repository
-[github.com/YOUR_USERNAME/argus](https://github.com/YOUR_USERNAME/argus)
+[github.com/YOUR_USERNAME/argus](https://github.com/Gopal-Singh-Subramani-Singh/argus)
 
 ---
 
@@ -78,7 +78,7 @@ Python · PyTorch (MPS + CPU) · ONNX Runtime · Apple MLX · DuckDB · Parquet 
 - Cross-platform optimization
 
 ### Repository
-[github.com/YOUR_USERNAME/pyrex](https://github.com/YOUR_USERNAME/pyrex)
+[github.com/YOUR_USERNAME/pyrex](https://github.com/Gopal-Singh-Subramani-Singh/pyrex)
 
 ---
 
@@ -104,7 +104,7 @@ Python · FastAPI · Redis · DuckDB · Parquet · MinIO · SQLite · APSchedule
 - Data consistency in distributed systems
 
 ### Repository
-[github.com/YOUR_USERNAME/strata](https://github.com/YOUR_USERNAME/strata)
+[github.com/YOUR_USERNAME/strata](https://github.com/Gopal-Singh-Subramani-Singh/strata)
 
 ---
 
@@ -130,7 +130,7 @@ Python · FastAPI · Redis Streams · SQLite · APScheduler · Prometheus · Gra
 - Resource management in distributed systems
 
 ### Repository
-[github.com/YOUR_USERNAME/conduit](https://github.com/YOUR_USERNAME/conduit)
+[github.com/YOUR_USERNAME/conduit](https://github.com/Gopal-Singh-Subramani-Singh/conduit)
 
 ---
 
@@ -156,7 +156,7 @@ Python · Typer · Docker · Helm · Kubernetes (K3s) · MinIO · ONNX Runtime �
 - Model registry and versioning
 
 ### Repository
-[github.com/YOUR_USERNAME/capsule](https://github.com/YOUR_USERNAME/capsule)
+[github.com/YOUR_USERNAME/capsule](https://github.com/Gopal-Singh-Subramani-Singh/capsule)
 
 ---
 
@@ -182,7 +182,7 @@ Python · FastAPI · gRPC · Redis · SQLite · Docker · Prometheus · Grafana 
 - Cluster simulation and modeling
 
 ### Repository
-[github.com/YOUR_USERNAME/lattice](https://github.com/YOUR_USERNAME/lattice)
+[github.com/YOUR_USERNAME/lattice](https://github.com/Gopal-Singh-Subramani-Singh/lattice)
 
 ---
 

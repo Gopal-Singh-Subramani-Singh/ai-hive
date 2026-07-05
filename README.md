@@ -205,9 +205,9 @@ Contributions are welcome! Each project is independently maintained. Please refe
 
 ## Contact
 
-Built by [Your Name]  
-GitHub: [@YOUR_USERNAME](https://github.com/Gopal-Singh-Subramani-Singh)  
-LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/gopalsinghs/)
+Built by [Gopal Singh]  
+GitHub: [@Gopal-Singh-Subramani-Singh](https://github.com/Gopal-Singh-Subramani-Singh)  
+LinkedIn: [gopalsinghs](https://linkedin.com/in/gopalsinghs/)
 
 > **Note**: Replace with your actual contact information after creating repositories.
 

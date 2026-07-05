@@ -1,4 +1,4 @@
-# AI Hive Roadmap
+co# AI Hive Roadmap
 
 ## Current Status: v1.0 (July 2026)
 

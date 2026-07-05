@@ -8,13 +8,13 @@ AI Hive is a local-first AI infrastructure suite made of seven independently dep
 
 | Project | Role in AI Hive | Description |
 |---------|----------------|-------------|
-| **[Hermes](https://github.com/YOUR_USERNAME/hermes)** | Serve | Distributed LLM inference gateway with routing, circuit breakers, rate limiting, streaming, and observability |
-| **[Argus](https://github.com/YOUR_USERNAME/argus)** | Monitor | ML observability and drift detection platform with statistical tests, alerts, and dashboards |
-| **[Pyrex](https://github.com/YOUR_USERNAME/pyrex)** | Benchmark | Cross-backend inference benchmarking suite for Apple Silicon (PyTorch MPS, ONNX Runtime, MLX, CPU) |
-| **[Strata](https://github.com/YOUR_USERNAME/strata)** | Store Features | Online/offline feature store with Redis serving, DuckDB/Parquet storage, and point-in-time joins |
-| **[Conduit](https://github.com/YOUR_USERNAME/conduit)** | Orchestrate | Event-driven ML pipeline orchestrator with Python DAG DSL, Redis Streams, retries, and DLQ |
-| **[Capsule](https://github.com/YOUR_USERNAME/capsule)** | Deploy | Container-native model deployment platform with Dockerfile generation, MinIO registry, Helm/K3s, and canary workflows |
-| **[Lattice](https://github.com/YOUR_USERNAME/lattice)** | Schedule | Distributed ML job scheduler simulation with fair-share scheduling, gang scheduling, preemption, and backfill |
+| **[Hermes](https://github.com/Gopal-Singh-Subramani-Singh/hermes)** | Serve | Distributed LLM inference gateway with routing, circuit breakers, rate limiting, streaming, and observability |
+| **[Argus](https://github.com/Gopal-Singh-Subramani-Singh/argus)** | Monitor | ML observability and drift detection platform with statistical tests, alerts, and dashboards |
+| **[Pyrex](https://github.com/Gopal-Singh-Subramani-Singh/pyrex)** | Benchmark | Cross-backend inference benchmarking suite for Apple Silicon (PyTorch MPS, ONNX Runtime, MLX, CPU) |
+| **[Strata](https://github.com/Gopal-Singh-Subramani-Singh/strata)** | Store Features | Online/offline feature store with Redis serving, DuckDB/Parquet storage, and point-in-time joins |
+| **[Conduit](https://github.com/Gopal-Singh-Subramani-Singh/conduit)** | Orchestrate | Event-driven ML pipeline orchestrator with Python DAG DSL, Redis Streams, retries, and DLQ |
+| **[Capsule](https://github.com/Gopal-Singh-Subramani-Singh/capsule)** | Deploy | Container-native model deployment platform with Dockerfile generation, MinIO registry, Helm/K3s, and canary workflows |
+| **[Lattice](https://github.com/Gopal-Singh-Subramani-Singh/lattice)** | Schedule | Distributed ML job scheduler simulation with fair-share scheduling, gang scheduling, preemption, and backfill |
 
 > **Note**: Replace `YOUR_USERNAME` with your actual GitHub username or organization name after creating repositories.
 
@@ -175,19 +175,6 @@ uvicorn lattice.api.rest_api:app --port 8002
 
 See [INTEGRATION_DEMO.md](./INTEGRATION_DEMO.md) for a full end-to-end demo connecting multiple systems.
 
----
-
-## Resume Snippets
-
-See [RESUME_SNIPPETS.md](./RESUME_SNIPPETS.md) for ready-to-use resume bullets.
-
----
-
-## LinkedIn Post
-
-See [LINKEDIN_POST.md](./LINKEDIN_POST.md) for a professional LinkedIn launch post.
-
----
 
 ## Project Structure
 
@@ -219,8 +206,8 @@ Contributions are welcome! Each project is independently maintained. Please refe
 ## Contact
 
 Built by [Your Name]  
-GitHub: [@YOUR_USERNAME](https://github.com/YOUR_USERNAME)  
-LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/YOUR_PROFILE)
+GitHub: [@YOUR_USERNAME](https://github.com/Gopal-Singh-Subramani-Singh)  
+LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/gopalsinghs/)
 
 > **Note**: Replace with your actual contact information after creating repositories.
 
